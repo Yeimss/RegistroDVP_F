@@ -1,0 +1,11 @@
+<div class="container user-container" *ngIf="(userService.user$ | async) !== null">
+    <h1>Bienvenido</h1>
+    <p class="lead">Hola <strong>{{nombreCompleto}}</strong>,</p>
+    <p>¡Has iniciado sesión correctamente!</p>
+  </div>
+
+  <div class="container welcome-container" *ngIf="(userService.user$ | async) == null">
+    <h1>Bienvenido</h1>
+    <p class="lead">Gracias por visitarnos. Esperamos que disfrutes tu experiencia.</p>
+    <p>Por favor, inicia sesión para continuar.</p>
+  </div>
